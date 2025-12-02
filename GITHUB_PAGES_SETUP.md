@@ -29,7 +29,7 @@ Once enabled, the site will automatically deploy when:
 ## Site URL
 
 Your site will be available at:
-`https://gazm81.github.io/my-recipe-app/`
+`https://garry-hughes.github.io/my-recipes/`
 
 ## Manual Build
 
