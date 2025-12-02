@@ -1,0 +1,22 @@
+{
+  "name": "my-recipe-app",
+  "version": "1.0.0",
+  "description": "initial attempt at hosting my recipes",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node app.js",
+    "build:static": "node generate-static-site.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.18.0",
+    "express-session": "^1.18.1",
+    "passport": "^0.7.0",
+    "passport-github2": "^0.1.12"
+  }
+}
