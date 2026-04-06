@@ -1,33 +1,35 @@
 # 🥧 Cottage Pie
 
 **Serves:** 6
-**Prep Time:** 20 mins
-**Cook Time:** 1 hr 15 mins
-**Total Time:** ~1 hr 35 min
+**Total Time:** ~2–2.5 hours
 
 ---
 
 ## 🛒 Ingredients
 
 ### Base
-- 500 ml beef stock (or 1 stock cube dissolved in 500 ml hot water)
 - 50 g butter
-- 2 onions, peeled and finely chopped
-- 2 carrots, peeled and finely diced
-- 2 celery stalks, trimmed and finely diced
+- 2 onions, finely chopped
+- 2 carrots, finely diced
+- 2 celery stalks, finely diced
 - 3 garlic cloves, minced
 - 1 sprig fresh thyme
 - 1 bay leaf
 - 1 kg beef mince (ground beef)
-- 2 tablespoons tomato puree
+- 2 tablespoons tomato paste
 - 2 tablespoons Worcestershire sauce
 - 4 drops Tabasco sauce
+- 1 tablespoon dark soy sauce
+- 1 teaspoon sugar
+- 1 teaspoon balsamic vinegar (optional but recommended)
 - 175 ml red wine
+- 500 ml beef stock
+- 2 cups frozen peas (optional, added in last 5 minutes)
 
 ### Mash Topping
 - 1 kg white potatoes
-- 75 g butter (additional, for mash topping)
-- 1 splash milk
+- 75 g butter
+- Splash of milk
 - Parmesan cheese, for grating
 - Salt and pepper, to taste
 
@@ -35,30 +37,23 @@
 
 ## 🧑‍🍳 Instructions
 
-1. Melt the butter in a pan on a medium heat.
-2. Add the onion, carrot, celery, garlic, thyme and bay leaf and fry over a medium/low heat for 10 minutes, or until softened but not coloured.
-3. Add the beef mince and cook for a further 10 minutes, or until brown.
-4. Add the tomato purée, Worcestershire sauce and Tabasco, then stir and cook for 2 minutes.
-5. Turn the heat up to high and add the red wine.
-6. Let it bubble away and reduce for 5 minutes then add the stock and reduce to a medium heat.
-7. Simmer for a further 20 minutes, stirring often.
-8. Meanwhile, cut the potatoes into halves and quarters so they're all a fairly even size.
-9. Cook in a pan of boiling, salted water for 15 to 20 minutes, or until cooked through.
-10. Drain in a colander and leave to steam dry.
-11. Preheat the oven to 190°C/170°C fan/gas 5.
-12. Taste the mince and season accordingly with salt and pepper.
-13. Transfer it to an ovenproof dish (approximately 20 cm by 30 cm).
-14. Mash the potatoes with the butter, milk and a pinch of salt and pepper then spread over the top of the mince.
-15. Finely grate over a little parmesan cheese then cook for 45 minutes, or until golden and bubbling.
-16. Serve with buttered peas or a simple side salad.
+1. Melt the butter in a large pan over medium heat. Add the onion, carrot and celery and cook for 10–12 minutes until soft and slightly sweet but not browned.
+2. Add the garlic, thyme and bay leaf and cook for a further 1–2 minutes.
+3. Push the vegetables to the side of the pan. Add the mince as one large slab and let it brown deeply on one side for 3–5 minutes without moving it. Flip, then break it up and stir through the vegetables. Cook until fully browned.
+4. Add the tomato paste and cook for 2 minutes. Add the Worcestershire sauce, Tabasco, soy sauce, sugar and balsamic vinegar, then stir and cook for a further 1–2 minutes.
+5. Turn the heat to high and add the red wine. Let it bubble hard for about 5 minutes until reduced and smelling rich rather than alcoholic.
+6. Add the beef stock and bring to a simmer. Cook for 30–40 minutes, stirring occasionally, until the sauce is thickened and glossy. Add the frozen peas in the last 5 minutes if using. Taste and adjust seasoning with salt, pepper and a splash more Worcestershire sauce if needed.
+7. Meanwhile, chop the potatoes evenly and boil in well-salted water for 15–20 minutes until tender. Drain and leave to steam dry, then mash with the butter, milk, salt and pepper until smooth and rich.
+8. Preheat the oven to 190°C (170°C fan). Transfer the meat filling to a baking dish (approximately 20 cm by 30 cm). Spoon the mash on top and spread evenly, then rough up the surface with a fork to create peaks. Grate parmesan generously over the top.
+9. Bake for 40–45 minutes until golden on top and bubbling at the edges. Leave to rest for 10–15 minutes before serving.
 
 ---
 
-## 📝 Notes
+## 📝 Pro Tips
 
-- Consider adding 1 tbsp of dark soy sauce along with the Worcestershire for extra depth.
-- Consider adding 2 cups of frozen peas to the mince.
-- Consider the giant hamburger method for the mince: brown on one side, then flip and add mirepoix.
+- If the sauce looks thin before assembling, simmer it for longer to reduce further.
+- If it gets too thick, loosen with a splash of stock.
+- Resting the pie for 10–15 minutes after baking lets it firm up and improves the flavour.
 
 ---
 
