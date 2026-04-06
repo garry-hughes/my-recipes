@@ -26,7 +26,7 @@
 
 ### Mash Topping
 - 1 kg white potatoes
-- 75 g butter
+- 75 g butter (additional, for mash topping)
 - 1 splash milk
 - Parmesan cheese, for grating
 - Salt and pepper, to taste
