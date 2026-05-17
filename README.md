@@ -2,6 +2,8 @@
 
 A static recipe website automatically deployed to GitHub Pages. Browse your favorite recipes through a clean, responsive web interface.
 
+**Updated by Grok AI for a test PR**
+
 ## Features
 
 - 📱 **Responsive Web Interface**: Browse recipes on any device
