@@ -71,6 +71,7 @@ To add a new recipe, edit `data/recipes.json` and add a new recipe object follow
 - Chuck Steak Chilli Con Carne
 - Instant Pot Whole Chicken with Air-Fryer Grill Finish
 - Chicken, Prawn & Pork Wonton Combination Noodle Soup
+- Brined Air Fryer Roast Chicken with Instant Pot Potatoes & Pan Gravy
 
 ## GitHub Pages Setup
 
