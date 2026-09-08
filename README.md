@@ -5,7 +5,7 @@ A static recipe website automatically deployed to GitHub Pages. Browse your favo
 ## Features
 
 - 📱 **Responsive Web Interface**: Browse recipes on any device
-- 🥘 **Structured Recipes**: Each recipe includes ingredients, method, timing planner, and recommended drinks
+- 🍗 **Structured Recipes**: Each recipe includes ingredients, method, timing planner, and recommended drinks
 - 🌐 **GitHub Pages**: Public static site automatically generated from recipes.json
 - 🔄 **Automatic Deployment**: GitHub Actions automatically builds and deploys when recipes are updated
 
@@ -63,6 +63,7 @@ To add a new recipe, edit `data/recipes.json` and add a new recipe object follow
 - Chicken, Corn & Pea Soup
 - Split Pea & Ham Hock Soup
 - Ultimate Instant Pot Beef Rendang
+- Bernadette-Style Instant Pot Beef Rendang
 - Mum's Lasagne
 - Mum's Self-Saucing Chocolate Pudding
 - Chuck Steak Ragu
