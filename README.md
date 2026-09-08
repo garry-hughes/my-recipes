@@ -59,10 +59,19 @@ To add a new recipe, edit `data/recipes.json` and add a new recipe object follow
 
 ## Included Recipes
 
-The app comes pre-loaded with these recipes:
 - Hungarian Goulash (Inspired by Mum's Version)
 - Chicken, Corn & Pea Soup
 - Split Pea & Ham Hock Soup
+- Ultimate Instant Pot Beef Rendang
+- Mum's Lasagne
+- Mum's Self-Saucing Chocolate Pudding
+- Chuck Steak Ragu
+- Pork Carnitas
+- Cottage Pie
+- Chuck Steak Chilli Con Carne
+- Instant Pot Whole Chicken with Air-Fryer Grill Finish
+- Chicken, Prawn & Pork Wonton Combination Noodle Soup
+- Brined Air Fryer Roast Chicken with Instant Pot Potatoes & Pan Gravy
 
 ## GitHub Pages Setup
 
