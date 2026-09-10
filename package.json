@@ -5,7 +5,8 @@
   "main": "generate-static-site.js",
   "scripts": {
     "build:static": "node generate-static-site.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node validate-recipes.js",
+    "validate": "node validate-recipes.js"
   },
   "keywords": [],
   "author": "",
