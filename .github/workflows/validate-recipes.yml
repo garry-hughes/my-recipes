@@ -1,0 +1,31 @@
+name: Validate recipes
+
+on:
+  pull_request:
+    paths:
+      - 'data/recipes.json'
+      - 'validate-recipes.js'
+      - 'package.json'
+      - '.github/workflows/validate-recipes.yml'
+  push:
+    branches: [ main ]
+    paths:
+      - 'data/recipes.json'
+      - 'validate-recipes.js'
+      - 'package.json'
+      - '.github/workflows/validate-recipes.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Validate recipes.json
+        run: npm test
