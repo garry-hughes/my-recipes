@@ -166,6 +166,53 @@
     "source": "traditional"
   },
   {
+    "id": "bernadettes-beef-rendang",
+    "title": "Bernadette-Style Instant Pot Beef Rendang",
+    "serves": "4",
+    "prepTime": "20 mins",
+    "cookTime": "Breakfast pressure + evening reduce (~45 min active)",
+    "ingredients": [
+      "1 kg beef chuck, thick fat trimmed, cut into 4–5 cm chunks",
+      "1 jar Woolies rendang paste (Ayam 185g or Tean's 200g)",
+      "4 shallots, sliced (or 1 small onion)",
+      "3 garlic cloves, minced",
+      "2 cm ginger, minced",
+      "2 lemongrass stalks, white part bruised",
+      "4 kaffir lime leaves, torn",
+      "1 cinnamon stick",
+      "1 tsp tamarind paste",
+      "1 tsp palm sugar or brown sugar",
+      "400 ml full-fat coconut milk (not cream, not lite)",
+      "100 ml water or unsalted beef stock, plus a splash extra to deglaze",
+      "1/2 cup unsweetened shredded coconut (for kerisik, toasted later)",
+      "1 tsp oil only if the pot looks dry when searing (jar paste is already oily)",
+      "Salt, to taste"
+    ],
+    "method": [
+      "BREAKFAST — sear first so the paste does not burn. Set Instant Pot to Sauté (Normal, not More). Pat beef dry. Sear in 2 batches, 2–3 minutes a side, until browned. Do not crowd the pot. Lift each batch out onto a plate. Leave the browned bits in the pot.",
+      "If the bottom looks dark or sticky, pour in a splash of stock and scrape hard until it is clean. This is what stops the Burn warning later.",
+      "Add shallots. Cook 2–3 minutes until soft. Add garlic and ginger, 1 minute.",
+      "Add the whole jar of paste. Stir 2–3 minutes only, until fragrant. Do not crank Sauté to High — paste scorches fast. Add lemongrass, kaffir lime leaves and cinnamon. 30 seconds.",
+      "Return the seared beef and any juices. Coat in the paste.",
+      "Add coconut milk, remaining stock and tamarind. Scrape the bottom again so nothing is stuck. Liquid should come about two-thirds up the meat, not drown it.",
+      "Cancel Sauté. Lid on. High Pressure 25 minutes. Natural release 10 minutes, then vent.",
+      "Lid off. Cool 20–30 minutes. Fridge the inner pot or tip into a container. Leave it the rest of the day, or overnight. Do not reduce yet. Do not add toasted coconut yet. Do not skim yet — the fridge does that.",
+      "EVENING — dry-toast the shredded coconut in a frypan, stirring, until deep gold. Off the heat. Bash or blitz while warm if you can; shreds are fine.",
+      "Lift the solid white fat off the cold rendang. Bin most of it. Keep about 1 tablespoon.",
+      "Instant Pot Sauté, lid off. Stir in toasted coconut and the sugar. Simmer 20–30 minutes, stirring, until the sauce is dark and clings to the beef. If oil pools, spoon it off.",
+      "Salt. If it tastes heavy, a pinch more tamarind. If it went too tight, a splash of coconut milk. Rest 10 minutes.",
+      "Stop when the sauce coats the meat. Not soupy. Not dry and frying in the pot. Serve with rice, fried tahu or tempeh, cucumber-carrot pickle, and greens wilted in a spoon of the sauce."
+    ],
+    "timing": "Morning: sear in 2 batches, build sauce, pressure 25 min + 10 min natural release, cool, fridge. Day or overnight rest. Evening: skim fat, toast coconut, Sauté-reduce 20–30 min until sauce clings. Same-day lunch-to-dinner rest is enough; overnight is better.",
+    "recommendedDrinks": [
+      "Indonesian beer",
+      "Coconut water",
+      "Jasmine tea",
+      "Sparkling water with lime"
+    ],
+    "source": "Waroeng Bernadette Seminyak, adapted for Woolies paste + Instant Pot"
+  },
+  {
     "id": "mums-lasagne",
     "title": "Mum's Lasagne",
     "serves": "4",
