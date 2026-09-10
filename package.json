@@ -1,7 +1,7 @@
 {
-  "name": "my-recipe-app",
+  "name": "my-recipes",
   "version": "1.0.0",
-  "description": "Static recipe website for GitHub Pages",
+  "description": "Static recipe website for GitHub Pages (garry-hughes/my-recipes)",
   "main": "generate-static-site.js",
   "scripts": {
     "build:static": "node generate-static-site.js",
