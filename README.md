@@ -63,6 +63,7 @@ To add a new recipe, edit `data/recipes.json` and add a new recipe object follow
 - Chicken, Corn & Pea Soup
 - Split Pea & Ham Hock Soup
 - Ultimate Instant Pot Beef Rendang
+- Bernadette-Style Instant Pot Beef Rendang
 - Mum's Lasagne
 - Mum's Self-Saucing Chocolate Pudding
 - Chuck Steak Ragu
