@@ -301,7 +301,7 @@ const indexHtml = `<!DOCTYPE html>
 
     <div class="footer">
         <p>Generated from recipes.json | ${recipes.length} recipes available</p>
-        <p><a href="https://github.com/gazm81/my-recipe-app" style="color: #667eea;">View Source on GitHub</a></p>
+        <p><a href="https://github.com/garry-hughes/my-recipes" style="color: #667eea;">View Source on GitHub</a></p>
     </div>
 </body>
 </html>`;
@@ -373,7 +373,7 @@ recipes.forEach(recipe => {
     </div>
 
     <div class="footer">
-        <p><a href="https://github.com/gazm81/my-recipe-app" style="color: #667eea;">View Source on GitHub</a></p>
+        <p><a href="https://github.com/garry-hughes/my-recipes" style="color: #667eea;">View Source on GitHub</a></p>
     </div>
 </body>
 </html>`;
