@@ -6,6 +6,42 @@ const path = require('path');
 // Load recipes data
 const recipes = require('./data/recipes.json');
 
+function escapeHtml(value) {
+    return String(value ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+}
+
+function timingItems(timing) {
+    if (!timing) return [];
+    return String(timing)
+        .split('|')
+        .map((part) => part.trim())
+        .filter(Boolean);
+}
+
+function recipeMetaHtml(recipe) {
+    const bits = [];
+    if (recipe.serves) bits.push(`<span>👥 Serves ${escapeHtml(recipe.serves)}</span>`);
+    if (recipe.prepTime) bits.push(`<span>⏱️ Prep ${escapeHtml(recipe.prepTime)}</span>`);
+    if (recipe.cookTime) bits.push(`<span>🔥 Cook ${escapeHtml(recipe.cookTime)}</span>`);
+    if (recipe.totalTime) bits.push(`<span>⏱️ ${escapeHtml(recipe.totalTime)}</span>`);
+    return bits.join('');
+}
+
+function recipeInfoHtml(recipe) {
+    const bits = [];
+    if (recipe.serves) bits.push(`<div><strong>Serves</strong>${escapeHtml(recipe.serves)}</div>`);
+    if (recipe.prepTime) bits.push(`<div><strong>Prep Time</strong>${escapeHtml(recipe.prepTime)}</div>`);
+    if (recipe.cookTime) bits.push(`<div><strong>Cook Time</strong>${escapeHtml(recipe.cookTime)}</div>`);
+    if (recipe.totalTime) bits.push(`<div><strong>Total Time</strong>${escapeHtml(recipe.totalTime)}</div>`);
+    if (recipe.source) bits.push(`<div><strong>Source</strong>${escapeHtml(recipe.source)}</div>`);
+    return bits.join('');
+}
+
 // Create docs directory if it doesn't exist
 const docsDir = path.join(__dirname, 'docs');
 if (!fs.existsSync(docsDir)) {
@@ -18,7 +54,6 @@ if (!fs.existsSync(cssDir)) {
     fs.mkdirSync(cssDir, { recursive: true });
 }
 
-// Simple CSS for the static site
 const css = `
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
@@ -263,8 +298,32 @@ body {
 }
 `;
 
+// Extra styles for notes + timing lists (appended after base CSS)
+const extraCss = `
+
+.notes {
+    background: #fff8e8;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #f0b429;
+}
+
+.notes li {
+    margin: 8px 0;
+}
+
+.timing ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.timing li {
+    margin: 8px 0;
+}
+`;
+
 // Write CSS file
-fs.writeFileSync(path.join(cssDir, 'style.css'), css);
+fs.writeFileSync(path.join(cssDir, 'style.css'), css + extraCss);
 
 // Generate index.html
 const indexHtml = `<!DOCTYPE html>
@@ -285,16 +344,14 @@ const indexHtml = `<!DOCTYPE html>
     <div class="recipes-grid">
         ${recipes.map(recipe => `
             <div class="recipe-card">
-                <h2><a href="recipe-${recipe.id}.html">${recipe.title}</a></h2>
+                <h2><a href="recipe-${escapeHtml(recipe.id)}.html">${escapeHtml(recipe.title)}</a></h2>
                 <div class="recipe-meta">
-                    ${recipe.serves ? `<span>👥 Serves ${recipe.serves}</span>` : ''}
-                    ${recipe.prepTime ? `<span>⏱️ Prep ${recipe.prepTime}</span>` : ''}
-                    ${recipe.cookTime ? `<span>🔥 Cook ${recipe.cookTime}</span>` : ''}
+                    ${recipeMetaHtml(recipe)}
                 </div>
                 <div class="recipe-preview">
-                    ${recipe.ingredients.slice(0, 3).join(', ')}${recipe.ingredients.length > 3 ? '...' : ''}
+                    ${escapeHtml(recipe.ingredients.slice(0, 3).join(', '))}${recipe.ingredients.length > 3 ? '...' : ''}
                 </div>
-                <a href="recipe-${recipe.id}.html" class="btn">View Recipe</a>
+                <a href="recipe-${escapeHtml(recipe.id)}.html" class="btn">View Recipe</a>
             </div>
         `).join('')}
     </div>
@@ -310,14 +367,18 @@ fs.writeFileSync(path.join(docsDir, 'index.html'), indexHtml);
 
 // Generate individual recipe pages
 recipes.forEach(recipe => {
+    const notes = Array.isArray(recipe.notes) ? recipe.notes : (recipe.notes ? [recipe.notes] : []);
+    const timingParts = timingItems(recipe.timing);
+    const drinks = Array.isArray(recipe.recommendedDrinks) ? recipe.recommendedDrinks : [];
+
     const recipeHtml = `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${recipe.title} - My Recipe Collection</title>
+    <title>${escapeHtml(recipe.title)} - My Recipe Collection</title>
     <link rel="stylesheet" href="css/style.css">
-    <meta name="description" content="${recipe.title} - A delicious recipe with ${recipe.ingredients.length} ingredients.">
+    <meta name="description" content="${escapeHtml(recipe.title)} - A delicious recipe with ${recipe.ingredients.length} ingredients.">
 </head>
 <body>
     <div class="header">
@@ -326,43 +387,53 @@ recipes.forEach(recipe => {
     </div>
 
     <div class="recipe-detail">
-        <h1 class="recipe-title">${recipe.title}</h1>
+        <h1 class="recipe-title">${escapeHtml(recipe.title)}</h1>
         
         <div class="recipe-info">
-            ${recipe.serves ? `<div><strong>Serves</strong>${recipe.serves}</div>` : ''}
-            ${recipe.prepTime ? `<div><strong>Prep Time</strong>${recipe.prepTime}</div>` : ''}
-            ${recipe.cookTime ? `<div><strong>Cook Time</strong>${recipe.cookTime}</div>` : ''}
-            ${recipe.source ? `<div><strong>Source</strong>${recipe.source}</div>` : ''}
+            ${recipeInfoHtml(recipe)}
         </div>
 
         <div class="section">
             <h3>🛒 Ingredients</h3>
             <ul class="ingredients">
-                ${recipe.ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
+                ${recipe.ingredients.map(ingredient => `<li>${escapeHtml(ingredient)}</li>`).join('')}
             </ul>
         </div>
 
         <div class="section">
             <h3>👨‍🍳 Method</h3>
             <ol class="method">
-                ${recipe.method.map(step => `<li>${step}</li>`).join('')}
+                ${recipe.method.map(step => `<li>${escapeHtml(step)}</li>`).join('')}
             </ol>
         </div>
 
-        ${recipe.timing ? `
+        ${timingParts.length ? `
         <div class="section">
             <h3>⏰ Timing</h3>
             <div class="timing">
-                ${recipe.timing}
+                <ul>
+                    ${timingParts.map(item => `<li>${escapeHtml(item)}</li>`).join('')}
+                </ul>
             </div>
         </div>
         ` : ''}
 
-        ${recipe.recommendedDrinks && recipe.recommendedDrinks.length > 0 ? `
+        ${notes.length ? `
+        <div class="section">
+            <h3>📝 Notes</h3>
+            <div class="notes">
+                <ul>
+                    ${notes.map(note => `<li>${escapeHtml(note)}</li>`).join('')}
+                </ul>
+            </div>
+        </div>
+        ` : ''}
+
+        ${drinks.length ? `
         <div class="section">
             <h3>🥂 Recommended Drinks</h3>
             <ul class="drinks">
-                ${recipe.recommendedDrinks.map(drink => `<li>${drink}</li>`).join('')}
+                ${drinks.map(drink => `<li>${escapeHtml(drink)}</li>`).join('')}
             </ul>
         </div>
         ` : ''}
