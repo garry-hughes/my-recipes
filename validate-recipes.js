@@ -9,7 +9,7 @@ const REQUIRED = ['id', 'title', 'ingredients', 'method'];
 const KNOWN_FIELDS = new Set([
   'id', 'title', 'ingredients', 'method',
   'serves', 'prepTime', 'cookTime', 'timing', 'totalTime', 'notes',
-  'source', 'recommendedDrinks', 'tags', 'appliances'
+  'source', 'recommendedDrinks', 'tags', 'appliances', 'summary'
 ]);
 
 function fail(msg) {
