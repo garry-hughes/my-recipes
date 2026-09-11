@@ -1,7 +1,7 @@
 [
   {
     "id": "hungarian-goulash",
-    "title": "Hungarian Goulash Recipe (Inspired by Mum's Version)",
+    "title": "Mum's Chicken Goulash (Hungarian-style tomato soup)",
     "serves": "6-8",
     "prepTime": "15 mins",
     "cookTime": "40 mins",
@@ -36,7 +36,17 @@
       "Dark beer",
       "Sparkling water with lemon"
     ],
-    "source": "original"
+    "source": "original",
+    "tags": [
+      "soup",
+      "family",
+      "stovetop",
+      "chicken"
+    ],
+    "summary": "Family chicken-and-capsicum stew in tomato soup — not a classic beef goulash.",
+    "notes": [
+      "Title says goulash for family nostalgia; it is chicken pieces simmered in tomato soup with capsicum and potato."
+    ]
   },
   {
     "id": "chicken-corn-soup",
@@ -77,7 +87,12 @@
       "Hot tea",
       "Sparkling water"
     ],
-    "source": "original"
+    "source": "original",
+    "tags": [
+      "soup",
+      "instant-pot",
+      "chicken"
+    ]
   },
   {
     "id": "pea-ham-soup",
@@ -117,7 +132,11 @@
       "Hot cider",
       "Water with lemon"
     ],
-    "source": "original"
+    "source": "original",
+    "tags": [
+      "soup",
+      "instant-pot"
+    ]
   },
   {
     "id": "ultimate-beef-rendang",
@@ -163,7 +182,12 @@
       "Jasmine tea",
       "Sparkling water with lime"
     ],
-    "source": "traditional"
+    "source": "traditional",
+    "tags": [
+      "instant-pot",
+      "asian",
+      "beef"
+    ]
   },
   {
     "id": "bernadettes-beef-rendang",
@@ -210,7 +234,12 @@
       "Jasmine tea",
       "Sparkling water with lime"
     ],
-    "source": "Waroeng Bernadette Seminyak, adapted for Woolies paste + Instant Pot"
+    "source": "Waroeng Bernadette Seminyak, adapted for Woolies paste + Instant Pot",
+    "tags": [
+      "instant-pot",
+      "asian",
+      "beef"
+    ]
   },
   {
     "id": "mums-lasagne",
@@ -269,7 +298,13 @@
       "Sparkling water",
       "Italian beer"
     ],
-    "source": "family"
+    "source": "family",
+    "tags": [
+      "oven",
+      "family",
+      "pasta",
+      "beef"
+    ]
   },
   {
     "id": "mums-self-saucing-chocolate-pudding",
@@ -312,7 +347,12 @@
       "Dessert wine",
       "Milk"
     ],
-    "source": "family"
+    "source": "family",
+    "tags": [
+      "dessert",
+      "oven",
+      "family"
+    ]
   },
   {
     "id": "chuck-steak-ragu",
@@ -368,7 +408,12 @@
       "Italian beer",
       "Sparkling water with lemon"
     ],
-    "source": "original"
+    "source": "original",
+    "tags": [
+      "instant-pot",
+      "pasta",
+      "beef"
+    ]
   },
   {
     "id": "pork-carnitas",
@@ -410,7 +455,13 @@
       "Lime sparkling water",
       "Horchata"
     ],
-    "source": "original"
+    "source": "original",
+    "tags": [
+      "instant-pot",
+      "air-fryer",
+      "mexican",
+      "pork"
+    ]
   },
   {
     "id": "cottage-pie",
@@ -462,7 +513,12 @@
       "Dark ale or stout",
       "Sparkling water with lemon"
     ],
-    "source": "original"
+    "source": "original",
+    "tags": [
+      "oven",
+      "family",
+      "beef"
+    ]
   },
   {
     "id": "chuck-steak-chilli-con-carne",
@@ -522,7 +578,12 @@
       "Red wine",
       "Sparkling water with lime"
     ],
-    "source": "original"
+    "source": "original",
+    "tags": [
+      "instant-pot",
+      "mexican",
+      "beef"
+    ]
   },
   {
     "id": "instant-pot-chicken",
@@ -564,7 +625,16 @@
       "Light beer",
       "Sparkling water with lemon"
     ],
-    "source": "original"
+    "source": "original",
+    "tags": [
+      "instant-pot",
+      "air-fryer",
+      "chicken"
+    ],
+    "summary": "Choose this when you want gravy tonight with little planning — pressure cook, optional air-fry crisp.",
+    "notes": [
+      "When to pick which chicken: use this Instant Pot version for a same-day dinner with white-wine gravy. Prefer the brined air-fryer roast when you can brine ahead and want crispier skin."
+    ]
   },
   {
     "id": "combination-noodle-soup",
@@ -576,8 +646,8 @@
       "300-400g chicken wings",
       "4 chicken drumsticks (≈600-700g total)",
       "300g raw prawn meat (fresh or frozen)",
-      "355g Easy Tiger Pork & Prawn Wontons (1 pack)",
-      "300g thick egg noodles (Mr Chen's pack is perfect)",
+      "355g Easy Tiger Pork & Prawn Wontons (1 pack, or equivalent)",
+      "300g thick egg noodles (Mr Chen's or equivalent)",
       "2-3 heads bok choy (≈300-400g)",
       "1 medium brown onion",
       "1 medium carrot",
@@ -608,7 +678,13 @@
       "Light beer",
       "Sparkling water"
     ],
-    "source": "original"
+    "source": "original",
+    "tags": [
+      "soup",
+      "instant-pot",
+      "asian",
+      "chicken"
+    ]
   },
   {
     "id": "brined-air-fryer-roast-chicken",
@@ -653,6 +729,15 @@
       "Apple juice for kids",
       "Iced tea"
     ],
-    "source": "original"
+    "source": "original",
+    "tags": [
+      "air-fryer",
+      "instant-pot",
+      "chicken"
+    ],
+    "summary": "Choose this when you can brine 2–12 hrs ahead — crispier skin, Instant Pot potatoes, pan gravy.",
+    "notes": [
+      "When to pick which chicken: use this brined air-fryer roast when you have time to brine and want crispier skin. Prefer the Instant Pot whole chicken when you need gravy tonight without a brine."
+    ]
   }
 ]
