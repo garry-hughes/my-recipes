@@ -20,13 +20,20 @@ A static recipe website automatically deployed to GitHub Pages. Browse your favo
 The GitHub Pages site is automatically available at:
 `https://garry-hughes.github.io/my-recipes/`
 
+## Source of truth
+
+- **Canonical data:** `data/recipes.json` — edit this to add or change recipes.
+- **Generator:** `generate-static-site.js` — builds the GitHub Pages site from that JSON.
+- **Generated output:** `docs/` — produced by `npm run build:static` / CI. Do not edit or commit it; it is gitignored and rebuilt on every Pages deploy.
+- Optional human notes under `recipes/` were removed so they cannot drift from JSON. Prefer fields on the recipe objects (`notes`, `timing`, etc.) instead.
+
 ## Local Development
 
 ```bash
 # Install dependencies
 npm install
 
-# Generate static site locally
+# Build generated site into docs/ (gitignored)
 npm run build:static
 
 # Serve locally for testing
@@ -55,7 +62,7 @@ Each recipe includes the following sections:
 
 ## Adding New Recipes
 
-To add a new recipe, edit `data/recipes.json` and add a new recipe object following the existing format. When you push the changes to the main branch, the static site will automatically be rebuilt and deployed.
+Edit `data/recipes.json` (pretty-printed JSON). Add a recipe object with at least `id`, `title`, `ingredients`, and `method`. Push to `main` and GitHub Actions regenerates `docs/` and deploys Pages. Run `npm test` locally to validate the dataset first.
 
 ## Included Recipes
 
