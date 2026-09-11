@@ -92,7 +92,8 @@
       "soup",
       "instant-pot",
       "chicken"
-    ]
+    ],
+    "summary": "Instant Pot chicken soup with peas, corn, and optional risoni — pressure then gentle slow finish."
   },
   {
     "id": "pea-ham-soup",
@@ -136,7 +137,8 @@
     "tags": [
       "soup",
       "instant-pot"
-    ]
+    ],
+    "summary": "Smoky split pea and ham hock soup — pressure cook, then slow for depth."
   },
   {
     "id": "ultimate-beef-rendang",
@@ -187,7 +189,8 @@
       "instant-pot",
       "asian",
       "beef"
-    ]
+    ],
+    "summary": "Jar-paste Instant Pot rendang finished with coconut cream and a long reduction — richer, creamier style."
   },
   {
     "id": "bernadettes-beef-rendang",
@@ -239,7 +242,8 @@
       "instant-pot",
       "asian",
       "beef"
-    ]
+    ],
+    "summary": "Waroeng Bernadette-style: sear first, coconut milk, fridge rest, evening reduce until the sauce clings."
   },
   {
     "id": "mums-lasagne",
@@ -304,7 +308,8 @@
       "family",
       "pasta",
       "beef"
-    ]
+    ],
+    "summary": "Family lasagne with beef ragu, white sauce, and San Remo sheets — oven bake."
   },
   {
     "id": "mums-self-saucing-chocolate-pudding",
@@ -352,7 +357,8 @@
       "dessert",
       "oven",
       "family"
-    ]
+    ],
+    "summary": "Warm self-saucing chocolate pudding — cake on top, sauce underneath."
   },
   {
     "id": "chuck-steak-ragu",
@@ -413,7 +419,8 @@
       "instant-pot",
       "pasta",
       "beef"
-    ]
+    ],
+    "summary": "Hybrid Instant Pot chuck ragu — pressure tenderize, then slow with milk/cream for pasta."
   },
   {
     "id": "pork-carnitas",
@@ -461,7 +468,8 @@
       "air-fryer",
       "mexican",
       "pork"
-    ]
+    ],
+    "summary": "Pressure-cooker pork shoulder finished crispy in the air fryer — tacos, bowls, leftovers."
   },
   {
     "id": "cottage-pie",
@@ -518,7 +526,8 @@
       "oven",
       "family",
       "beef"
-    ]
+    ],
+    "summary": "Beef mince under buttery mash — long simmer, ~2–2.5 hours all-in."
   },
   {
     "id": "chuck-steak-chilli-con-carne",
@@ -583,7 +592,8 @@
       "instant-pot",
       "mexican",
       "beef"
-    ]
+    ],
+    "summary": "Cubed chuck chilli with beans and a touch of dark chocolate — pressure then simmer."
   },
   {
     "id": "instant-pot-chicken",
@@ -684,7 +694,8 @@
       "instant-pot",
       "asian",
       "chicken"
-    ]
+    ],
+    "summary": "Chicken, prawn, and wonton noodle soup built on Instant Pot broth — brands ok as equivalents."
   },
   {
     "id": "brined-air-fryer-roast-chicken",
