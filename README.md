@@ -62,11 +62,11 @@ Each recipe includes the following sections:
 
 ## Adding New Recipes
 
-Edit `data/recipes.json` (pretty-printed JSON). Add a recipe object with at least `id`, `title`, `ingredients`, and `method`. Push to `main` and GitHub Actions regenerates `docs/` and deploys Pages. Run `npm test` locally to validate the dataset first.
+Edit `data/recipes.json` (optional `tags` and `summary` help browsing) (pretty-printed JSON). Add a recipe object with at least `id`, `title`, `ingredients`, and `method`. Push to `main` and GitHub Actions regenerates `docs/` and deploys Pages. Run `npm test` locally to validate the dataset first.
 
 ## Included Recipes
 
-- Hungarian Goulash (Inspired by Mum's Version)
+- Mum's Chicken Goulash (Hungarian-style tomato soup)
 - Chicken, Corn & Pea Soup
 - Split Pea & Ham Hock Soup
 - Ultimate Instant Pot Beef Rendang
