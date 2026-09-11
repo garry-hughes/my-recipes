@@ -44,7 +44,7 @@ cd docs && python3 -m http.server 8080
 If the deployment fails:
 1. Check the Actions tab for error logs
 2. Ensure GitHub Pages is enabled in Settings
-3. Verify the docs/ folder contains the generated files
+3. Re-run `npm run build:static` locally and confirm `docs/` is generated (it is gitignored; CI builds it for deploy)
 4. Make sure the workflow has proper permissions
 
 ## Recent Updates
