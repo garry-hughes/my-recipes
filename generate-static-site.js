@@ -32,6 +32,23 @@ function recipeMetaHtml(recipe) {
     return bits.join('');
 }
 
+
+function recipeTags(recipe) {
+    return Array.isArray(recipe.tags) ? recipe.tags.filter(Boolean) : [];
+}
+
+function tagsHtml(recipe) {
+    const tags = recipeTags(recipe);
+    if (!tags.length) return '';
+    return `<div class="tags">${tags.map((tag) => `<span class="tag-pill">${escapeHtml(tag)}</span>`).join('')}</div>`;
+}
+
+function allTags(recipesList) {
+    const set = new Set();
+    recipesList.forEach((recipe) => recipeTags(recipe).forEach((tag) => set.add(tag)));
+    return Array.from(set).sort();
+}
+
 function recipeInfoHtml(recipe) {
     const bits = [];
     if (recipe.serves) bits.push(`<div><strong>Serves</strong>${escapeHtml(recipe.serves)}</div>`);
@@ -320,12 +337,89 @@ const extraCss = `
 .timing li {
     margin: 8px 0;
 }
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    margin: 20px 0 10px;
+    padding: 16px;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid #e1e5e9;
+}
+
+.filters input[type="search"] {
+    flex: 1 1 220px;
+    min-width: 180px;
+    padding: 10px 12px;
+    border: 1px solid #d0d7de;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+.tag-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag-filters button {
+    border: 1px solid #d0d7de;
+    background: #f6f8fa;
+    color: #333;
+    border-radius: 999px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.tag-filters button.active {
+    background: #667eea;
+    border-color: #667eea;
+    color: white;
+}
+
+.recipe-summary {
+    color: #555;
+    font-size: 0.95em;
+    margin: 8px 0 12px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 10px 0 0;
+}
+
+.tags span,
+.tag-pill {
+    background: #eef1ff;
+    color: #3f51b5;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 0.8em;
+}
+
+.recipe-card.is-hidden {
+    display: none;
+}
+
+#filter-empty {
+    display: none;
+    text-align: center;
+    color: #666;
+    margin: 30px 0;
+}
 `;
 
 // Write CSS file
 fs.writeFileSync(path.join(cssDir, 'style.css'), css + extraCss);
 
 // Generate index.html
+const tagList = allTags(recipes);
 const indexHtml = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -333,7 +427,7 @@ const indexHtml = `<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Recipe Collection</title>
     <link rel="stylesheet" href="css/style.css">
-    <meta name="description" content="A collection of delicious recipes including Hungarian Goulash, Chicken Corn Soup, and more.">
+    <meta name="description" content="A collection of family recipes with search and tags.">
 </head>
 <body>
     <div class="header">
@@ -341,25 +435,80 @@ const indexHtml = `<!DOCTYPE html>
         <p>A delicious collection of tried and tested recipes</p>
     </div>
 
-    <div class="recipes-grid">
-        ${recipes.map(recipe => `
-            <div class="recipe-card">
+    <div class="filters">
+        <input type="search" id="recipe-search" placeholder="Search titles or ingredients..." aria-label="Search recipes">
+        <div class="tag-filters" id="tag-filters">
+            <button type="button" class="active" data-tag="all">All</button>
+            ${tagList.map((tag) => `<button type="button" data-tag="${escapeHtml(tag)}">${escapeHtml(tag)}</button>`).join('')}
+        </div>
+    </div>
+    <p id="filter-empty">No recipes match that search or tag.</p>
+
+    <div class="recipes-grid" id="recipes-grid">
+        ${recipes.map(recipe => {
+            const tags = recipeTags(recipe);
+            const searchBlob = escapeHtml([
+                recipe.title,
+                recipe.summary || '',
+                ...(recipe.ingredients || []),
+                ...tags
+            ].join(' ').toLowerCase());
+            return `
+            <div class="recipe-card"
+                 data-title="${escapeHtml((recipe.title || '').toLowerCase())}"
+                 data-search="${searchBlob}"
+                 data-tags="${escapeHtml(tags.join(','))}">
                 <h2><a href="recipe-${escapeHtml(recipe.id)}.html">${escapeHtml(recipe.title)}</a></h2>
+                ${recipe.summary ? `<div class="recipe-summary">${escapeHtml(recipe.summary)}</div>` : ''}
                 <div class="recipe-meta">
                     ${recipeMetaHtml(recipe)}
                 </div>
+                ${tagsHtml(recipe)}
                 <div class="recipe-preview">
                     ${escapeHtml(recipe.ingredients.slice(0, 3).join(', '))}${recipe.ingredients.length > 3 ? '...' : ''}
                 </div>
                 <a href="recipe-${escapeHtml(recipe.id)}.html" class="btn">View Recipe</a>
-            </div>
-        `).join('')}
+            </div>`;
+        }).join('')}
     </div>
 
     <div class="footer">
         <p>Generated from recipes.json | ${recipes.length} recipes available</p>
         <p><a href="https://github.com/garry-hughes/my-recipes" style="color: #667eea;">View Source on GitHub</a></p>
     </div>
+    <script>
+    (function () {
+      const search = document.getElementById('recipe-search');
+      const empty = document.getElementById('filter-empty');
+      const cards = Array.from(document.querySelectorAll('.recipe-card'));
+      const buttons = Array.from(document.querySelectorAll('#tag-filters button'));
+      let activeTag = 'all';
+
+      function applyFilters() {
+        const q = (search.value || '').trim().toLowerCase();
+        let visible = 0;
+        cards.forEach((card) => {
+          const tags = (card.getAttribute('data-tags') || '').split(',').filter(Boolean);
+          const hay = card.getAttribute('data-search') || '';
+          const tagOk = activeTag === 'all' || tags.indexOf(activeTag) !== -1;
+          const textOk = !q || hay.indexOf(q) !== -1;
+          const show = tagOk && textOk;
+          card.classList.toggle('is-hidden', !show);
+          if (show) visible += 1;
+        });
+        empty.style.display = visible ? 'none' : 'block';
+      }
+
+      search.addEventListener('input', applyFilters);
+      buttons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          activeTag = btn.getAttribute('data-tag') || 'all';
+          buttons.forEach((b) => b.classList.toggle('active', b === btn));
+          applyFilters();
+        });
+      });
+    })();
+    </script>
 </body>
 </html>`;
 
@@ -388,7 +537,9 @@ recipes.forEach(recipe => {
 
     <div class="recipe-detail">
         <h1 class="recipe-title">${escapeHtml(recipe.title)}</h1>
-        
+        ${recipe.summary ? `<div class="recipe-summary">${escapeHtml(recipe.summary)}</div>` : ''}
+        ${tagsHtml(recipe)}
+
         <div class="recipe-info">
             ${recipeInfoHtml(recipe)}
         </div>
