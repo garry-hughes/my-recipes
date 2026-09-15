@@ -5,7 +5,7 @@ A static recipe website automatically deployed to GitHub Pages. Browse your favo
 ## Features
 
 - 📱 **Responsive Web Interface**: Browse recipes on any device
-- 🥘 **Structured Recipes**: Each recipe includes ingredients, method, timing planner, and recommended drinks
+- 🍲 **Structured Recipes**: Each recipe includes ingredients, method, timing planner, and recommended drinks
 - 🌐 **GitHub Pages**: Public static site automatically generated from recipes.json
 - 🔄 **Automatic Deployment**: GitHub Actions automatically builds and deploys when recipes are updated
 
@@ -64,6 +64,9 @@ Each recipe includes the following sections:
 
 Edit `data/recipes.json` (optional `tags` and `summary` help browsing) (pretty-printed JSON). Add a recipe object with at least `id`, `title`, `ingredients`, and `method`. Push to `main` and GitHub Actions regenerates `docs/` and deploys Pages. Run `npm test` locally to validate the dataset first.
 
+Pending single-recipe objects (merge into `data/recipes.json` to publish on Pages):
+- `data/long-slow-massaman.json`
+
 ## Included Recipes
 
 - Mum's Chicken Goulash (Hungarian-style tomato soup)
@@ -71,6 +74,7 @@ Edit `data/recipes.json` (optional `tags` and `summary` help browsing) (pretty-p
 - Split Pea & Ham Hock Soup
 - Ultimate Instant Pot Beef Rendang
 - Bernadette-Style Instant Pot Beef Rendang
+- Long-Slow Instant Pot Massaman Beef
 - Mum's Lasagne
 - Mum's Self-Saucing Chocolate Pudding
 - Chuck Steak Ragu
