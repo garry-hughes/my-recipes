@@ -66,6 +66,7 @@ Edit `data/recipes.json` (optional `tags` and `summary` help browsing) (pretty-p
 
 Pending single-recipe objects (merge into `data/recipes.json` to publish on Pages):
 - `data/long-slow-bourguignon.json`
+- `data/long-slow-massaman.json`
 
 ## Included Recipes
 
@@ -75,6 +76,7 @@ Pending single-recipe objects (merge into `data/recipes.json` to publish on Page
 - Ultimate Instant Pot Beef Rendang
 - Bernadette-Style Instant Pot Beef Rendang
 - Long-Slow Instant Pot Beef Bourguignon
+- Long-Slow Instant Pot Massaman Beef
 - Mum's Lasagne
 - Mum's Self-Saucing Chocolate Pudding
 - Chuck Steak Ragu
