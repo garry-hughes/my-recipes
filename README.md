@@ -65,7 +65,8 @@ Each recipe includes the following sections:
 Edit `data/recipes.json` (optional `tags` and `summary` help browsing) (pretty-printed JSON). Add a recipe object with at least `id`, `title`, `ingredients`, and `method`. Push to `main` and GitHub Actions regenerates `docs/` and deploys Pages. Run `npm test` locally to validate the dataset first.
 
 Pending single-recipe objects (merge into `data/recipes.json` to publish on Pages):
-- `data/long-slow-massaman.json`
+- `data/long-slow-bourguignon.json` — Long-Slow Instant Pot Beef Bourguignon
+- `data/long-slow-massaman.json` — Long-Slow Instant Pot Massaman Beef
 
 ## Included Recipes
 
@@ -74,7 +75,6 @@ Pending single-recipe objects (merge into `data/recipes.json` to publish on Page
 - Split Pea & Ham Hock Soup
 - Ultimate Instant Pot Beef Rendang
 - Bernadette-Style Instant Pot Beef Rendang
-- Long-Slow Instant Pot Massaman Beef
 - Mum's Lasagne
 - Mum's Self-Saucing Chocolate Pudding
 - Chuck Steak Ragu
