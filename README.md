@@ -75,8 +75,6 @@ Pending single-recipe objects (merge into `data/recipes.json` to publish on Page
 - Split Pea & Ham Hock Soup
 - Ultimate Instant Pot Beef Rendang
 - Bernadette-Style Instant Pot Beef Rendang
-- Long-Slow Instant Pot Beef Bourguignon
-- Long-Slow Instant Pot Massaman Beef
 - Mum's Lasagne
 - Mum's Self-Saucing Chocolate Pudding
 - Chuck Steak Ragu
