@@ -65,8 +65,8 @@ Each recipe includes the following sections:
 Edit `data/recipes.json` (optional `tags` and `summary` help browsing) (pretty-printed JSON). Add a recipe object with at least `id`, `title`, `ingredients`, and `method`. Push to `main` and GitHub Actions regenerates `docs/` and deploys Pages. Run `npm test` locally to validate the dataset first.
 
 Pending single-recipe objects (merge into `data/recipes.json` to publish on Pages):
-- `data/long-slow-bourguignon.json`
-- `data/long-slow-massaman.json`
+- `data/long-slow-bourguignon.json` — Long-Slow Instant Pot Beef Bourguignon
+- `data/long-slow-massaman.json` — Long-Slow Instant Pot Massaman Beef
 
 ## Included Recipes
 
