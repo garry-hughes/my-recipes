@@ -1,0 +1,59 @@
+name: apply-bourguignon-shallots
+
+on:
+  push:
+    branches: [recipe/bourguignon-shallots-fix]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Replace pearl onions with shallots in bourguignon
+        run: |
+          python3 <<'PY'
+          from pathlib import Path
+          p = Path('data/recipes.json')
+          t = p.read_text()
+          if 'pearl onions' not in t:
+              print('Already patched')
+              raise SystemExit(0)
+          reps = [
+            ('12\u201316 frozen pearl onions, or 1 small onion in wedges (Day 2)',
+             '8\u201312 shallots, peeled and halved if large (Day 2)'),
+            ('Do not add mushrooms or pearl onions yet.',
+             'Do not add mushrooms or shallots yet.'),
+            ('In a frypan, brown mushrooms and pearl onions in butter. They need their own colour.',
+             'In a frypan, brown mushrooms and shallots in butter. They need their own colour.'),
+            ('Stir mushrooms and onions into the pot for the last 5\u201310 minutes.',
+             'Stir mushrooms and shallots into the pot for the last 5\u201310 minutes.'),
+            ('brown mushrooms and onions separately, fold in 5\u201310 min',
+             'brown mushrooms and shallots separately, fold in 5\u201310 min'),
+            ('Mushrooms and pearl onions go in on day 2.',
+             'Mushrooms and shallots go in on day 2.'),
+            ('Brown mushrooms and pearl onions on day 2 so they do not turn to mush.',
+             'Brown mushrooms and shallots on day 2 so they do not turn to mush.'),
+          ]
+          for a, b in reps:
+              if a not in t:
+                  raise SystemExit(f'missing expected text: {a}')
+              t = t.replace(a, b)
+          p.write_text(t)
+          print('patched recipes.json')
+          PY
+      - name: Commit recipe change and remove this workflow
+        run: |
+          rm -f .github/workflows/apply-bourguignon-shallots.yml
+          git config user.name "Garry Hughes"
+          git config user.email "gazm81@yahoo.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "Use shallots instead of pearl onions in beef bourguignon"
+          git push
