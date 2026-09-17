@@ -18,7 +18,7 @@ A static recipe website automatically deployed to GitHub Pages. Browse your favo
 ## Accessing the Site
 
 The GitHub Pages site is automatically available at:
-`https://garry-hughes.github.io/my-recipes/`
+[https://garry-hughes.github.io/my-recipes/](https://garry-hughes.github.io/my-recipes/)
 
 ## Source of truth
 
